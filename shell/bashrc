@@ -1,0 +1,11 @@
+# this function is used to quick do 'cd ..' several times.
+function cdl 
+{
+  str=""
+  declare -i level=$1
+  for((i=0;i<level;i++))
+  do  
+    str=${str}../
+  done
+  cd $str
+}
